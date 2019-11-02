@@ -1,0 +1,148 @@
+
+#define BLYNK_PRINT Serial
+
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "5WkIgdZ9fwpJjUZ1pJXk0C-A8oCbjCaz";
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "iPhone";
+char pass[] = "9@55w0r9";
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass);
+  // You can also specify server:
+  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 80);
+  //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
+}
+
+//int container_1_read()
+//{
+  
+//if(digitalRead(16)==HIGH)
+//{
+ //int f=10000;
+ //return f; 
+//}
+//}
+
+//int container_2_read()
+//{
+  //if(digitalRead(5)==HIGH)
+  //{
+    //int x=10000;
+    //return x;
+  //}
+//}
+BLYNK_WRITE(V10) //writes the data to virtual pin V10
+{
+int i=param.asInt();
+digitalWrite(13,LOW);
+digitalWrite(12,LOW);
+switch(i)
+{
+  case 0:
+  {
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
+    break;
+  }
+  case 1:
+  {
+    digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break;
+  }
+  case 2:
+  {
+    digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break;
+  }
+  case 3:
+  {
+      
+    digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break;
+  
+  }
+  case 4:
+  {
+    digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break;
+  }
+  case 5:
+  {
+   digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break; 
+  }
+  case 6:
+   {
+    digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break;
+   }
+   case 7:
+     {
+   digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break; 
+  }
+  case 8:
+   {
+   digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break; 
+  }
+  case 9:
+   {
+   digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break; 
+  }
+  case 10:
+   {
+   digitalWrite(13,HIGH);
+    delay(10000);
+    digitalWrite(12,HIGH);
+    delay(10000);
+    break; 
+  }
+}
+
+}
+
+void loop()
+{
+  Blynk.run();
+}
