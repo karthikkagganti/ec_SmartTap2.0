@@ -1,4 +1,3 @@
-
 #define BLYNK_PRINT Serial
 
 
@@ -25,14 +24,18 @@ void setup()
   //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8080);
 }
 
-//int container_1_read()
+//void container_1_read()
 //{
   
-//if(digitalRead(16)==HIGH)
-//{
- //int f=10000;
- //return f; 
-//}
+   //if(digitalRead(16)==HIGH)
+    //{
+       //int f=10000;
+       //return f; 
+    //}
+  //else
+    //{
+       //return 0;
+    //}
 //}
 
 //int container_2_read()
@@ -42,100 +45,126 @@ void setup()
     //int x=10000;
     //return x;
   //}
+  //else
+   //{
+   //return 0;
+   //}
 //}
 BLYNK_WRITE(V10) //writes the data to virtual pin V10
 {
 int i=param.asInt();
-digitalWrite(13,LOW);
-digitalWrite(12,LOW);
+digitalWrite(13,HIGH);
+digitalWrite(12,HIGH);
 switch(i)
 {
   case 0:
   {
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
-    digitalWrite(12,LOW);
+    digitalWrite(12,HIGH);
     break;
   }
   case 1:
   {
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
-    delay(10000);
+    digitalWrite(12,LOW);
+    delay(10000);    
     digitalWrite(12,HIGH);
-    delay(10000);
     break;
   }
   case 2:
   {
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break;
   }
   case 3:
   {
       
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break;
   
   }
   case 4:
   {
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break;
   }
   case 5:
   {
-   digitalWrite(13,HIGH);
+   digitalWrite(13,LOW);
+    delay(10000);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break; 
   }
   case 6:
    {
+    digitalWrite(13,LOW);
+    delay(10000);
     digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break;
    }
    case 7:
      {
-   digitalWrite(13,HIGH);
+   digitalWrite(13,LOW);
+    delay(10000);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break; 
   }
   case 8:
    {
-   digitalWrite(13,HIGH);
+   digitalWrite(13,LOW);
+    delay(10000);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break; 
   }
   case 9:
    {
-   digitalWrite(13,HIGH);
+   digitalWrite(13,LOW);
+    delay(10000);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break; 
   }
   case 10:
    {
-   digitalWrite(13,HIGH);
+   digitalWrite(13,LOW);
+    delay(10000);
+    digitalWrite(13,HIGH);
+    digitalWrite(12,LOW);
     delay(10000);
     digitalWrite(12,HIGH);
-    delay(10000);
     break; 
   }
 }
